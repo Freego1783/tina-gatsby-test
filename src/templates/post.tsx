@@ -2,6 +2,7 @@ import React from "react";
 import { client } from "../../tina/__generated__/client";
 import { useTina, tinaField } from "tinacms/dist/react";
 import { TinaMarkdown } from "tinacms/dist/rich-text";
+import { navigate } from "gatsby";
 
 const PostTemplate = ({ serverData }: any) => {
   const { data } = useTina({
@@ -12,6 +13,7 @@ const PostTemplate = ({ serverData }: any) => {
 
   return (
     <div>
+      <button onClick={() => {navigate("/");}}>🏚️ Go back home</button>
       <h1>Post page</h1>
       <h1 data-tina-field={tinaField(data?.post, "title")}>
         {data?.post?.title}
@@ -26,7 +28,7 @@ const PostTemplate = ({ serverData }: any) => {
 
 export default PostTemplate;
 
-export async function getServerData({pageContext} : any) {
+export async function getServerData({ pageContext }: any) {
   const postData = await client.queries.post({
     relativePath: pageContext.relativePath,
   });
