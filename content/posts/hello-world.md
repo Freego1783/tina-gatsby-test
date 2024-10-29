@@ -1,5 +1,5 @@
 ---
-title: This is a cool title
+title: Cool first post
 ---
 
 ## Hello World!
