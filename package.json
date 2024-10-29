@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "npx tinacms dev -c \"gatsby develop\"",
     "start": "gatsby develop",
-    "build": "gatsby build",
+    "build": "tinacms build --no-client-build-cache && gatsby build",
     "serve": "gatsby serve",
     "clean": "gatsby clean",
     "typecheck": "tsc --noEmit"
@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@tinacms/cli": "^1.6.10",
-    "@types/node": "^22.8.1",
+    "@types/node": "^22.8.2",
     "@types/react": "^18.2.55",
     "@types/react-dom": "^18.2.19",
     "typescript": "^5.3.3"
