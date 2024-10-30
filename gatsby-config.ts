@@ -15,7 +15,11 @@ const config: GatsbyConfig = {
       headers: [
         {
           key: 'Content-Security-Policy',
-          value: 'frame-ancestors *;',
+          value: "default-src 'self'; frame-ancestors 'none';",
+        },
+        {
+          key: 'Access-Control-Allow-Origin',
+          value: '*',
         },
       ],
     },
