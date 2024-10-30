@@ -9,21 +9,21 @@ const config: GatsbyConfig = {
   // Learn more at: https://gatsby.dev/graphql-typegen
   graphqlTypegen: true,
   plugins: [],
-  headers: [
-    {
-      source: '*',
-      headers: [
-        {
-          key: 'Content-Security-Policy',
-          value: "default-src 'self'; frame-ancestors 'none';",
-        },
-        {
-          key: 'Access-Control-Allow-Origin',
-          value: '*',
-        },
-      ],
-    },
-  ],
+  // headers: [
+  //   {
+  //     source: '*',
+  //     headers: [
+  //       {
+  //         key: 'Content-Security-Policy',
+  //         value: "default-src 'self'; frame-ancestors 'none';",
+  //       },
+  //       {
+  //         key: 'Access-Control-Allow-Origin',
+  //         value: '*',
+  //       },
+  //     ],
+  //   },
+  // ],
 }
 
 export default config
